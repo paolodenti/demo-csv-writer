@@ -1,0 +1,16 @@
+{
+    "name": "demo-csv-writer",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.mjs",
+    "type": "module",
+    "scripts": {
+        "start": "node index.mjs"
+    },
+    "author": "EZ VPN Inc.",
+    "license": "ISC",
+    "dependencies": {
+        "mqtt": "^4.2.1",
+        "objects-to-csv": "^1.3.6"
+    }
+}
