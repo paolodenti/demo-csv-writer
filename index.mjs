@@ -5,7 +5,7 @@ import objectsToCsv from "objects-to-csv";
 
 const config = {
     mqttHost: process.env.MQTT_HOST ?? "127.0.0.1",
-    mqttPort: process.env.MQTT_PORT ?? 1883,
+    mqttPort: process.env.MQTT_PORT ? parseInt(process.env.MQTT_PORT) : 1883,
     mqttInTopic: process.env.MQTT_IN_TOPIC ?? "fld/+/r/#",
     mqttReconnectPeriod: 5000,
     csvPath: process.env.CSV_PATH ?? "/tmp/log.csv"
