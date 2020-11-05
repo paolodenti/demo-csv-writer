@@ -28,8 +28,7 @@ const saveToCsv = async (data) => {
 const mqttBrokerSetup = (messageHandler) => {
     console.log(`Connecting to mqtt broker at ${config.mqttHost}:${config.mqttPort}`);
 
-    const mqttClient = mqtt.connect(`mqtt://${config.mqttHost}`, {
-        port: config.mqttPort,
+    const mqttClient = mqtt.connect(`mqtt://${config.mqttHost}:${config.mqttPort}`, {
         reconnectPeriod: config.mqttReconnectPeriod
     });
 
