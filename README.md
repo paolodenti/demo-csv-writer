@@ -8,16 +8,16 @@ In a real production environment you should take care of the csv max file size, 
 
 ## Environment variables
 
--   `MQTT_HOST`: mqtt host. Defaults to `127.0.0.1`.
--   `MQTT_PORT`: mqtt port. Defaults to `1883`.
--   `MQTT_IN_TOPIC`: mqtt topics to subscribe. Default to `fld/+/r/#`.
--   `CSV_PATH`: File path of csv file to be populated with mqtt incoming messages. Defaults to `/tmp/log.csv`.
+- `MQTT_HOST`: mqtt host. Defaults to `127.0.0.1`.
+- `MQTT_PORT`: mqtt port. Defaults to `1883`.
+- `MQTT_IN_TOPIC`: mqtt topics to subscribe. Default to `fld/+/r/#`.
+- `CSV_PATH`: File path of csv file to be populated with mqtt incoming messages. Defaults to `/tmp/log.csv`.
 
 ## Docker build
 
 You can build and push on docker hub your image using the commands below. Otherwise just adapt the image name to your Docker Hub account.
 
-```
+```bash
 DOCKER_HUB_ACCOUNT=<your docker hub account>
 IMG_NAME=$(node -p "require('./package.json').name")
 IMG_VERSION=$(node -p "require('./package.json').version")
